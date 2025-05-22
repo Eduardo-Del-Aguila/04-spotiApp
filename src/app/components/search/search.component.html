@@ -1,1 +1,10 @@
 <p>search works!</p>
+<div class="flex m-4 mx-auto">
+  <div class="flex flex-col m-4 mx-auto max-w-full">
+    <input #termino type="text" (keyup)= "buscar(termino.value)" class="border text-center border-green-300 rounded-3xl p-1 focus:border-green-800" placeholder="Buscar Artista"
+    >
+  </div>
+</div>
+
+
+<app-tarjetas [items]="artistas" ></app-tarjetas>

@@ -11,8 +11,16 @@ export const routes: Routes = [
     loadComponent: () => import('./components/search/search.component').then(m => m.SearchComponent)
   },
   {
-    path: 'artistt',
+    path: 'artists',
     loadComponent: () => import('./components/artist/artist.component').then(m => m.ArtistComponent)
+  },
+    {
+    path: 'artists/:id',
+    loadComponent: () => import('./components/artist/artist.component').then(m => m.ArtistComponent)
+  },
+  {
+    path: 'prueba/:id',
+    loadComponent: () => import('./components/prueba/prueba.component').then(m => m.PruebaComponent)
   },
   {
     path: '', pathMatch: 'full', redirectTo: 'home'
